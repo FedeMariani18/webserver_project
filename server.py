@@ -56,3 +56,16 @@ def handle_request(client_socket):
         log_request(method, path, 404)
 
     client_socket.close()
+
+def run_server():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
+        server.bind((HOST, PORT))
+        server.listen(5)
+        print(f"Server in ascolto su http://{HOST}:{PORT}")
+
+        while True:
+            client_socket, _ = server.accept()
+            handle_request(client_socket)
+
+if __name__ == "__main__":
+    run_server()
