@@ -68,3 +68,27 @@ section
     opacity: 1;
   }
 }
+
+.box-container {
+  display: flex;
+  gap: 20px; 
+  flex-wrap: wrap;
+}
+
+.box {
+	background: #f2f2f2;
+	padding: 1.5rem;
+	border-radius: 8px;
+	width: 300px;
+	transition: transform 0.3s ease;
+}
+
+.box:hover {
+	transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+	.box {
+	width: 100%;
+	}
+}
