@@ -59,7 +59,7 @@ section
 }
 
 .fade-in {
-  animation: fadeIn 1.5s ease forwards;
+  animation: fadeIn 3s ease forwards;
   opacity: 0;
 }
 
